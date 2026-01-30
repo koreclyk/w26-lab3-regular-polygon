@@ -31,19 +31,27 @@ class RegularPolyWIP {
    public static void main(String[] args){
       Scanner in = new Scanner(System.in);
 
+      System.out.print("\n\t\t~~~Regular Polygon Calculator~~~\n\n");
+
+      System.out.print("\t\t\t\t\t    -------");
+      System.out.print("\n\t\t\t\t\t  /         \\");
+      System.out.print("\n\t\t\t\t    /           \\");
+      System.out.print("\n\t\t\t\t    \\           /");
+      System.out.print("\n\t\t\t\t\t  \\         /");
+      System.out.print("\n\t\t\t\t\t    -------");
+
       System.out.print("(Minimum = 3) Enter a number of sides: ");
       double n = in.nextDouble();
          if (n >= 3){
-            System.out.println("(Minimum = 3) Enter a length for the legs: ");
+            System.out.print("\n\n(Minimum = 3) Enter a length for the legs: ");
             double l = in.nextDouble();
                if (l >= 3){
-                  break;
+                  System.out.printf("Area: %.0f", calcRegPoAr(n, l));
                }else{
                   System.out.print("That isn't what we're looking for, try again!");
                }
-         else{
+         }else{
             System.out.print("Not a number we want! Better luck next time!");
          }
-         }
+      }
    }
-}
