@@ -40,6 +40,13 @@ class RegularPolyWIP {
       System.out.print("\n\t\t\t\t\t  \\         /");
       System.out.print("\n\t\t\t\t\t    -------");
 
+      System.out.print("\n\n\t\t\t\t\t       ^");
+      System.out.print("\n\t\t\t\t\t\t   / \\");
+      System.out.print("\n\t\t\t\t\t     /   \\");
+      System.out.print("\n\t\t\t\t\t    /     \\");
+      System.out.print("\n\t\t\t\t\t   /       \\");
+      System.out.print("\n\t\t\t\t\t   ---------");
+
       System.out.print("(Minimum = 3) Enter a number of sides: ");
       double n = in.nextDouble();
          if (n >= 3){
