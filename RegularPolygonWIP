@@ -1,0 +1,41 @@
+/*
+
+
+Main method:
+-prompt user to enter # of sides
+-prompt user to enter side length
+  *assume side length to be 3 or greater
+
+Create a method:
+-calculate the area using
+  *area = (n*l*apothem)/2
+  *apothem = (1/(2tan(180/n)))
+  *l = side length
+  *n = number of sides
+
+Call the area calculation method in the main method
+
+
+*/
+
+import java.util.Math;
+
+class RegularPolyWIP {
+
+   public static double calcRegPoAr(double area){
+      return n * l * apothem / 2;
+   }
+  
+   public static void main(String[] args){
+      System.out.print("(Minimum = 3) Enter a number of sides: ");
+      float n = in.nextFloat();
+         if n >= 3:
+            System.out.println("(Minimum = 3) Enter a length for the legs: ");
+            float l = in.nextFloat();
+               if l >= 3:
+                  break
+               else:
+                  System.out.print("That isn't what we're looking for, try again!");
+         else:
+            System.out.print("Not a number we want! Better luck next time!");
+   }
