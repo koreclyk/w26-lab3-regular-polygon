@@ -18,24 +18,32 @@ Call the area calculation method in the main method
 
 */
 
-import java.util.Math;
+import java.util.Scanner;
+import java.lang.Math; // somehow made a wombo combo import?
 
 class RegularPolyWIP {
 
-   public static double calcRegPoAr(double area){
-      return n * l * apothem / 2;
+   public static double calcRegPoAr(double n, double l){
+      double apothem = l / (2 * Math.tan (Math.toRadians(180 / n)));
+      return (n * l * apothem) / 2;
    }
   
    public static void main(String[] args){
+      Scanner in = new Scanner(System.in);
+
       System.out.print("(Minimum = 3) Enter a number of sides: ");
-      float n = in.nextFloat();
-         if n >= 3:
+      double n = in.nextDouble();
+         if (n >= 3){
             System.out.println("(Minimum = 3) Enter a length for the legs: ");
-            float l = in.nextFloat();
-               if l >= 3:
-                  break
-               else:
+            double l = in.nextDouble();
+               if (l >= 3){
+                  break;
+               }else{
                   System.out.print("That isn't what we're looking for, try again!");
-         else:
+               }
+         else{
             System.out.print("Not a number we want! Better luck next time!");
+         }
+         }
    }
+}
