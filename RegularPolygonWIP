@@ -31,8 +31,10 @@ class RegularPolyWIP {
    public static void main(String[] args){
       Scanner in = new Scanner(System.in);
 
+/*
       boolean yes = true;
       boolean no = false;
+*/
 
       System.out.print("\n\t\t~~~Regular Polygon Calculator~~~\n\n");
 
@@ -57,7 +59,8 @@ class RegularPolyWIP {
             double l = in.nextDouble();
                if (l >= 3){
                   System.out.println("\nWould you like to round the answer? (lower case only) [yes/no] ");
-                  String roundq = in.next();
+                  String yes = in.next();
+                  String no = in.next();
                      if (yes){
                         System.out.println("\nTo what decimal place would you like to round?\nENTER NUMBERS ONLY\n1, 2, 3, 4, 5 or 0 (whole rounding)? ");
                         int userin = in.nextInt();
@@ -76,8 +79,10 @@ class RegularPolyWIP {
                            }else{
                               System.out.print("\n\nYou need to pick a decimal place to round to. Try again!");
                            }
-                     }if (no){
+
+                     }elif (no){
                         System.out.println("\nThe area of your polygon = " + calcRegPoAr(n, l)); // NEEDED to be concatenated
+
                      }else{
                         System.out.print("\n\nBro... it's a yes or no answer... *insert strong Italian accent* ~C'mooooon!");
                      }
@@ -87,8 +92,9 @@ class RegularPolyWIP {
          }else{
             System.out.print("\n\nNot a number we want! Better luck next time!");
          }
-      }
+      
    }
+}
 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 // removed bits
