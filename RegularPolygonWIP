@@ -31,15 +31,8 @@ class RegularPolyWIP {
    public static void main(String[] args){
       Scanner in = new Scanner(System.in);
 
-      int u = 1;
-      int v = 2;
-      int w = 3;
-      int x = 4;
-      int y = 5;
-      String z = "whole";
-      Int zz = 
-      String a = "yes";
-      String b = "no";
+      boolean yes = true;
+      boolean no = false;
 
       System.out.print("\n\t\t~~~Regular Polygon Calculator~~~\n\n");
 
@@ -65,26 +58,26 @@ class RegularPolyWIP {
                if (l >= 3){
                   System.out.println("\nWould you like to round the answer? (lower case only) [yes/no] ");
                   String roundq = in.next();
-                     if (roundq == a){
-                        System.out.println("\nTo what decimal place would you like to round?\n1, 2, 3, 4, 5 or whole? ");
-                        int rounddec = in.nextInt();
-                           if (rounddec == u){
+                     if (yes){
+                        System.out.println("\nTo what decimal place would you like to round?\nENTER NUMBERS ONLY\n1, 2, 3, 4, 5 or 0 (whole rounding)? ");
+                        int userin = in.nextInt();
+                           if (userin == 1){
                               System.out.printf("\nThe area of your polygon = %.1f", calcRegPoAr(n, l));
-                           }if (rounddec == v){
+                           }if (userin == 2){
                               System.out.printf("\nThe area of your polygon = %.2f", calcRegPoAr(n, l));
-                           }if (rounddec == w){
+                           }if (userin == 3){
                               System.out.printf("\nThe area of your polygon = %.3f", calcRegPoAr(n, l));
-                           }if (rounddec == x){
+                           }if (userin == 4){
                               System.out.printf("\nThe area of your polygon = %.4f", calcRegPoAr(n, l));
-                           }if (rounddec == y){
+                           }if (userin == 5){
                               System.out.printf("\nThe area of your polygon = %.5f", calcRegPoAr(n, l));
-                           }if (rounddec == z){
+                           }if (userin == 0){
                               System.out.printf("\nThe area of your polygon = %.0f", calcRegPoAr(n, l));
                            }else{
                               System.out.print("\n\nYou need to pick a decimal place to round to. Try again!");
                            }
-                     }if (roundq == b){
-                        System.out.print("\nThe area of your polygon = ", calcRegPoAr(n, l));
+                     }if (no){
+                        System.out.println("\nThe area of your polygon = " + calcRegPoAr(n, l)); // NEEDED to be concatenated
                      }else{
                         System.out.print("\n\nBro... it's a yes or no answer... *insert strong Italian accent* ~C'mooooon!");
                      }
